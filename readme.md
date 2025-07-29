@@ -145,7 +145,7 @@ Use `benchmark.js` to test performance in real API scenarios:
 
 ```js
 // benchmark.js
-benchmark('https://jsonplaceholder.typicode.com/posts');
+benchmark('https://dummyjson.com/products?limit=100');
 ```
 
 ---
