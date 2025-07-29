@@ -84,32 +84,56 @@ npm i @krishnadaspc/tiny-json
 ## 🔧 Usage
 
 ```js
-import { compress, decompress, analyze } from 'tiny-json';
+import { compress, decompress, analyze } from '@krishnadaspc/tiny-json';
 
-const data = {
-  users: [
-    { id: 1, name: 'Alice', role: 'admin' },
-    { id: 2, name: 'Alice', role: 'admin' },
-    { id: 3, name: 'Alice', role: 'admin' }
-  ]
-};
+const originalData = {
+  currentPage: 1,
+  totalPages: 5,
+  pageSize: 20,
+  totalCount: 100,
+  records: Array.from({ length: 436 }, (_, i) => ({
+    userId: i,
+    userName: "john_doe",
+    userEmail: "john@example.com",
+    userRole: "admin",
+    userStatus: "active",
+    address: {
+      city: "New York",
+      zip: "10001",
+      country: "USA"
+    },
+    contact: {
+      phone: "+1-555-1234567",
+      alternate: "+1-555-0000000"
+    }
+  }))
+}
 
-const compressed = compress(data);
+// 🔐 Compress the JSON
+const compressed = compress(originalData);
+
+console.log("Compressed:", compressed);
+
+// 🔓 Decompress it back
 const restored = decompress(compressed);
-const stats = analyze(data, 'kb');
 
-console.log(stats);
+console.log("Restored:", restored);
+
+// 📊 Show compression stats
+const stats = analyze(originalData);
+console.log( stats);
+
 ```
 
 ---
 
 ## 📊 Output Example
 
-```json
+```js
 {
-  "originalSize": "3.39 KB",
-  "compressedSize": "2.50 KB",
-  "reductionPercent": 26.34
+  originalSize: '100.02 KB',
+  compressedSize: '54.50 KB',
+  reductionPercent: 45.51
 }
 ```
 
