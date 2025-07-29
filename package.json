@@ -1,18 +1,22 @@
 {
-  "name": "tiny-json",
-  "version": "1.0.0",
+  "name": "@krishnadaspc/tiny-json",
+  "version": "1.0.",
   "main": "index.js",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
-    "example": "example"
+    "example": "example",
+    "test": "tests"
   },
   "scripts": {
     "test": "node --test",
     "dev": "node example/app.js"
   },
   "author": "Krishnadas PC",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
+  "description": "Lightweight JSON compressor** with reversible key/value renaming, built for API response optimization and payload shrinking.",
   "keywords": [
     "json",
     "compression",
@@ -20,6 +24,13 @@
     "lightweight",
     "zero-dependencies",
     "reversible"
-  ]
-
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pckrishnadas88/tiny-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pckrishnadas88/tiny-json/issues"
+  },
+  "homepage": "https://github.com/pckrishnadas88/tiny-json#readme"
 }

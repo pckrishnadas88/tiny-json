@@ -76,7 +76,7 @@ For those, GZIP alone is better.
 ## 📦 Install
 
 ```bash
-npm install tiny-json
+npm i @krishnadaspc/tiny-json
 ```
 
 ---
