@@ -1,0 +1,25 @@
+{
+  "name": "tiny-json",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "node --test",
+    "dev": "node example/app.js"
+  },
+  "author": "Krishnadas PC",
+  "license": "ISC",
+  "description": "",
+  "keywords": [
+    "json",
+    "compression",
+    "minify",
+    "lightweight",
+    "zero-dependencies",
+    "reversible"
+  ]
+
+}
